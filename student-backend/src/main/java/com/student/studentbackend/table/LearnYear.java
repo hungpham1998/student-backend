@@ -1,43 +1,23 @@
 package com.student.studentbackend.table;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "LearnYear")
+@Data
 public class LearnYear {
 
     @Id
-    @Column(name = "Id",nullable=false, unique=false)
+    @Column(name = "id",nullable=false, unique=false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long Id;
+    private  Long id;
 
-    @Column(name = "LearnYear")
-    private String LearnYear;
+    @Column(name = "title")
+    private String title;
 
-    @Column(name = "Note")
-    private String Note;
+    @Column(name = "note")
+    private String note;
 
-    public String getNote() {
-        return Note;
-    }
-
-    public Long getId() {
-        return Id;
-    }
-
-    public String getLearnYear() {
-        return LearnYear;
-    }
-
-    public void setNote(String note) {
-        Note = note;
-    }
-
-    public void setId(Long id) {
-        Id = id;
-    }
-
-    public void setLearnYear(String learnYear) {
-        LearnYear = learnYear;
-    }
 }

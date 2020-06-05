@@ -7,60 +7,21 @@ import javax.persistence.*;
 public class Subject {
 
     @Id
-    @Column(name = "Id",nullable=false, unique=false)
+    @Column(name = "id",nullable=false, unique=false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long Id;
+    private  Long id;
 
-    @Column(name = "Title")
-    private String Title;
+    @Column(name = "title")
+    private String title;
 
-    @Column(name = "Note")
-    private String Note;
+    @Column(name = "note")
+    private String note;
 
-    @Column(name = "Code")
-    private String Code;
+    @Column(name = "code")
+    private String code;
 
-    @Column(name = "CreaditNumber")
-    private String CreaditNumber;
+    @Column(name = "creaditNumber")
+    private String creaditNumber;
 
-    public String getCode() {
-        return Code;
-    }
-
-    public String getTitle() {
-        return Title;
-    }
-
-    public String getNote() {
-        return Note;
-    }
-
-    public Long getId() {
-        return Id;
-    }
-
-    public String getCreaditNumber() {
-        return CreaditNumber;
-    }
-
-    public void setCode(String code) {
-        Code = code;
-    }
-
-    public void setTitle(String title) {
-        Title = title;
-    }
-
-    public void setNote(String note) {
-        Note = note;
-    }
-
-    public void setId(Long id) {
-        Id = id;
-    }
-
-    public void setCreaditNumber(String creaditNumber) {
-        CreaditNumber = creaditNumber;
-    }
 }
 

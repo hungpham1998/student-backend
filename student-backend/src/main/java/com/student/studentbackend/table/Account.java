@@ -14,20 +14,20 @@ import java.util.Set;
 public class Account  {
 
     //private Set<Role> Roles;
-    Set<Role> Roles = new HashSet<>();
-
-    public Account(String Account, Set<Role> Roles){
-        this.Account = Account;
-        this.Roles = Roles;
-    }
-
-    public Account(String Account){
-        this.Account = Account;
-    }
-
-    public  Account(){
-        super();
-    }
+//    Set<Role> Roles = new HashSet<>();
+//
+//    public Account(String Account, Set<Role> Roles){
+//        this.Account = Account;
+//        this.Roles = Roles;
+//    }
+//
+//    public Account(String Account){
+//        this.Account = Account;
+//    }
+//
+//    public  Account(){
+//        super();
+//    }
 
 
     @Id
@@ -56,32 +56,32 @@ public class Account  {
     @Column(name = "PostionId")
     private long PostionId;
 
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "account_id", referencedColumnName = "Id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "Id"))
-
-    public Set<Role> getRoles() {
-        return Roles;
-    }
-
-    public void setRoles(Set<Role> Roles) {
-        this.Roles = Roles;
-    }
-
-
-    @Override
-    public String toString() {
-        String result = String.format(
-                "account[id=%d, account='%s', image='%s', mail='%s', address='%s']%n",
-                Id, Account,Image, Mail, Address);
-        if (Roles != null) {
-            for(Role Role : Roles) {
-                result += String.format(
-                        "role[id=%d, title='%s']%n",
-                        Role.getId(), Role.getTitle());
-            }
-        }
-        System.out.println(result);
-        return result;
-    }
+//
+//    @ManyToMany(cascade = CascadeType.ALL)
+//    @JoinTable(name = "account_role", joinColumns = @JoinColumn(name = "account_id", referencedColumnName = "Id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "Id"))
+//
+//    public Set<Role> getRoles() {
+//        return Roles;
+//    }
+//
+//    public void setRoles(Set<Role> Roles) {
+//        this.Roles = Roles;
+//    }
+//
+//
+//    @Override
+//    public String toString() {
+//        String result = String.format(
+//                "account[id=%d, account='%s', image='%s', mail='%s', address='%s']%n",
+//                Id, Account,Image, Mail, Address);
+//        if (Roles != null) {
+//            for(Role Role : Roles) {
+//                result += String.format(
+//                        "role[id=%d, title='%s']%n",
+//                        Role.getId(), Role.getTitle());
+//            }
+//        }
+//        System.out.println(result);
+//        return result;
+//    }
 }

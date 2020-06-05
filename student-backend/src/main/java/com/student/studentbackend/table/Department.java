@@ -1,53 +1,35 @@
 package com.student.studentbackend.table;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Department")
+@Data
 public class Department {
     @Id
-    @Column(name = "Id",nullable=false, unique=false)
+    @Column(name = "id",nullable=false, unique=false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long Id;
+    private  Long id;
 
-    @Column(name = "Title")
-    private String Title;
+    @Column(name = "title")
+    private String title;
 
-    @Column(name = "Note")
-    private String Note;
+    @Column(name = "note")
+    private String note;
 
-    @Column(name = "ParmentId")
-    private long  ParmentId;
+    @Column(name = "parmentId")
+    private long  parmentId;
 
     public Long getId() {
-        return Id;
-    }
-
-    public String getTitle() {
-        return Title;
-    }
-
-    public String getNote() {
-        return Note;
-    }
-
-    public long getParmentId() {
-        return ParmentId;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
-    public void setTitle(String title) {
-        Title = title;
-    }
 
-    public void setNote(String note) {
-        Note = note;
-    }
 
-    public void setParmentId(long parmentId) {
-        ParmentId = parmentId;
-    }
 }
